@@ -1,5 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val dotenv_kotlin_version: String by project
 val kotlin_telegram_bot_version: String by project
 
 plugins {
@@ -15,6 +16,7 @@ repositories {
 }
 
 dependencies {
+    implementation("io.github.cdimascio:dotenv-kotlin:$dotenv_kotlin_version")
     implementation("io.github.kotlin-telegram-bot.kotlin-telegram-bot:telegram:$kotlin_telegram_bot_version")
     testImplementation(kotlin("test-junit5"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
