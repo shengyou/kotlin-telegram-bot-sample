@@ -7,3 +7,4 @@
 *.iws
 
 .env
+http-client.private.env.json

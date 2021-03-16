@@ -1,0 +1,21 @@
+# Setup Webhook
+POST https://api.telegram.org/bot{{ token }}/setWebhook
+Content-Type: application/json
+Accept: application/json
+Cache-Control: no-cache
+
+{
+  "url": "{{ webhook_url }}/{{ token }}",
+  "max_connections": 50,
+  "allowed_updates": []
+}
+
+###
+
+# Delete Webhook
+GET https://api.telegram.org/bot{{ token }}/deleteWebhook
+
+###
+
+# Get Webhook Info
+GET https://api.telegram.org/bot{{ token }}/getWebhookInfo
